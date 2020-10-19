@@ -13,7 +13,7 @@ I won't include python_get_resolve.py here since it should be shipped with Resol
 
 My scripts include it so that it can load the Resolve python class when it cannot find it using the missing environment variables.
 
-## NOTE:  Not all of these work.
+## NOTE:  There is no warrenty or gaurentee with these.  These are experiments. Use at your own risk but feel free to submit pull requests if you fix or improve something.
 
 They are experiments and/or starting points for things I hope to have working eventually.
 
