@@ -21,6 +21,7 @@ They are experiments and/or starting points for things I hope to have working ev
 ## Installation:
 
 To get these working for Resolve, copy these files to "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Comp/"
+You can copy these by running the setupEnv.py script like this:  'python3 setupEnv.py'
 
 
 ## Files:
