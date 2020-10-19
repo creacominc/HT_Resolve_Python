@@ -25,7 +25,7 @@ To get these working for Resolve, copy these files to "/Library/Application Supp
 
 ## Files:
 
-- setupEnv.py - import this to get the module loaded from a hard-coded path if needed.
+- setupEnv.py - import this to get the module loaded from a hard-coded path if needed.  This script removes the need to copy the Resolve script into the Comp folder.
 - test.py - just a test of the python in resolve.  Lists all the clips that are used in the media pool.
 - whatVersion.py - just reports the version of python
 - moveMetaDataCommentsToKeywords.py - an attempt at moving comments to keywords.
