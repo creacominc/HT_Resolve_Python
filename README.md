@@ -16,7 +16,7 @@ You also may need to set the Python Version to 3.6 in the "Script" panel in "Fus
 
 The scripts need to be in the Comp folder to be found by Resolve. The setupEnv.py script can be run from a terminal (shell) to install the files like this:  'python3 setupEnv.py'
 
-## NOTE:  There is no warrenty or gaurentee with these.  These are experiments. Use at your own risk but feel free to submit pull requests if you fix or improve something.
+## NOTE:  There is no warrenty or guarantee with these.  These are experiments. Use at your own risk but feel free to submit pull requests if you fix or improve something.
 
 They are experiments and/or starting points for things I hope to have working eventually.
 
