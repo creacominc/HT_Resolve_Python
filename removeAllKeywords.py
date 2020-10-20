@@ -17,16 +17,8 @@ for clip in clips :
     usage     = int(properties['Usage'])
     description = properties['Description']
     keywords    = properties['Keyword']
-
     metaData = clip.GetMetadata()
-    if ( 'Description' in metaData ):
-        description = metaData[ 'Description' ].strip()
-        if ( 'Keywords' in metaData ):
-            keywords = metaData[ 'Keywords' ].strip()
-            print( 'Appending description (' + description + ') to keywords (' + keywords + ')' )
-            clip.SetMetadata( 'Keywords', keywords + ',' + description )
-        else:
-            print( 'Copying description (' + description + ') to keywords' )
-            clip.SetMetadata( 'Keywords',  description )
-        clip.SetMetadata( 'Description', '' )
+
+    if ( 'Keywords' in metaData ):
+        clip.SetMetadata( 'Keywords', '' )
 
