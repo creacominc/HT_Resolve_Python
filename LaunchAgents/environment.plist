@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+<dict>
+ <key>Label</key>
+ <string>my.startup</string>
+ <key>ProgramArguments</key>
+ <array>
+ <string>sh</string>
+ <string>-c</string>
+ <string>launchctl setenv PATH "/Library/Frameworks/Python.framework/Versions/3.6/bin:$PATH";
+ launchctl setenv RESOLVE_SCRIPT_API "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Developer/Scripting";
+ launchctl setenv RESOLVE_SCRIPT_LIB "/Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Libraries/Fusion/fusionscript.so";
+ launchctl setenv PYTHONPATH "$PYTHONPATH:$RESOLVE_SCRIPT_API/Modules/";
+ launchctl setenv RESOLVE_SCRIPT_FOLDER "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Comp/";
+ </string>
+ </array>
+ <key>RunAtLoad</key>
+ <true/>
+</dict>
+</plist>
