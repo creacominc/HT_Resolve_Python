@@ -32,5 +32,4 @@ for clip in clips :
         print( rv )
         rv = clip.SetClipProperty( 'Description', str(description) )
         print( rv )
-        print( clip.SetClipProperty('Take', 'Take Test') )
-        print( clip.GetClipProperty( 'Take' ) )
+

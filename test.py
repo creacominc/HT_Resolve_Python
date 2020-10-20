@@ -19,9 +19,9 @@ for clip in clips :
     clipType  = properties['Type']
     usage     = int(properties['Usage'])
     if ( clipType != 'Timeline' ):
-        print( f'Name={name},  optimized={optimized},  type={clipType},  usage={usage}' )
+        print( 'Name=' + name + ',  optimized=' + optimized + ',  type=' + clipType + ',  usage=' + str(usage) )
         if ( usage > 0 ):
-            print( f'to be optimized: {name}' )
+            print( 'to be optimized: ' + name )
             print( dir( clip ) )
 
 

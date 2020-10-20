@@ -9,12 +9,12 @@ def getResolveObj():
                 
         except ImportError:
                 try:
-
                         MODULE="/Library/Application Support/Blackmagic Design/DaVinci Resolve/Developer/Scripting/Modules/DaVinciResolveScript.py"
                         bmd = imp.load_source('DaVinciResolveScript',MODULE)
 
-                except ImportError:
-                        # No fallbacks ... report error:
+                except ImportError as err:
+                        print( 'Failed to load resolve script: ' + MODULE )
+                        print( err )
                         sys.exit()
 
         return bmd.scriptapp("Resolve")
