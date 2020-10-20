@@ -19,5 +19,5 @@ for clip in clips :
     keywords    = properties['Keyword']
     metaData = clip.GetMetadata()
 
-    print( 'Clip: [' + name + '],  Description: [' + description + '], Keywords: [' + keywords + '], Usage: [' + str(usage) + '], Optimized: [' + optimized + ']' )
+    print( 'Clip: [' + name + '], \tUsage: [' + str(usage) + '], \tOptimized: [' + optimized + '],  \tDescription: [' + description + '], \tKeywords: [' + keywords + ']' )
 
