@@ -20,5 +20,6 @@ for clip in clips :
     metaData = clip.GetMetadata()
 
     if ( 'Keywords' in metaData ):
+        keywords = metaData['Keywords']
+        print( 'Setting Keywords (' + keywords + ') to an empty string for clip: ' + name )
         clip.SetMetadata( 'Keywords', '' )
-

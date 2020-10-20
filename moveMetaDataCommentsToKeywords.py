@@ -21,7 +21,7 @@ for clip in clips :
     metaData = clip.GetMetadata()
     if ( 'Description' in metaData ):
         description = metaData[ 'Description' ].strip()
-        if ( 'Keywords' in metaData ):
+        if ( 'Keywords' in metaData  and (len(metaData['Keywords'].strip().strip(",")) > 0)):
             keywords = metaData[ 'Keywords' ].strip()
             print( 'Appending description (' + description + ') to keywords (' + keywords + ')' )
             clip.SetMetadata( 'Keywords', keywords + ',' + description )
