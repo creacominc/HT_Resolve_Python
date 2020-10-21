@@ -6,10 +6,10 @@ def iterateFolder( folder ):
     clips = folder.GetClipList()
     for clip in clips :
         properties = clip.GetClipProperty()
-        name      = properties['Clip Name']
-        optimized = properties['Optimized Media']
-        clipType  = properties['Type']
-        usage     = int(properties['Usage'])
+        #name      = properties['Clip Name']
+        #optimized = properties['Optimized Media']
+        #clipType  = properties['Type']
+        #usage     = int(properties['Usage'])
         comments = properties['Comments']
         keywords    = properties['Keyword']
 
