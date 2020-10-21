@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 *~
+README.txt
 
 # C extensions
 *.so
