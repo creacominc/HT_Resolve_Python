@@ -10,12 +10,12 @@ def iterateFolder( folder ):
         name      = properties['Clip Name']
         optimized = properties['Optimized Media']
         clipType  = properties['Type']
-        usage     = int(properties['Usage'])
+        usage     = properties['Usage']
         description = properties['Description']
         comments    = properties['Comments']
         keywords    = properties['Keyword']
         metaData = clip.GetMetadata()
-        print( 'Clip: [' + name + '], \tUsage: [' + str(usage) + '], \tOptimized: [' + optimized + '],  \tDescription: [' + description + '], \tComments: [' + comments + '],\tKeywords: [' + keywords + ']' )
+        print( 'Clip: [' + name + '], \tUsage: [' + usage + '], \tOptimized: [' + optimized + '],  \tDescription: [' + description + '], \tComments: [' + comments + '],\tKeywords: [' + keywords + ']' )
 
     subFolders = folder.GetSubFolderList()
     for sub in subFolders:
