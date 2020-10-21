@@ -27,7 +27,7 @@ if __name__ == "__main__":
         COMP="/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Comp/"
         files = glob.glob("*.py")
         for file in files:
-                print( file )
+                print( "Copying " + file + " to " + COMP )
                 copyfile( file, COMP + file )
 
         
