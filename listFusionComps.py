@@ -2,26 +2,6 @@
 from setupEnv import getResolveObj
 import sys
 
-
-# def iterateFolder( folder ):
-#     clips = folder.GetClipList()
-#     for clip in clips :
-#         properties = clip.GetClipProperty()
-#         name      = properties['Clip Name']
-#         optimized = properties['Optimized Media']
-#         #clipType  = properties['Type']
-#         usage     = properties['Usage']
-#         description = properties['Description']
-#         comments    = properties['Comments']
-#         keywords    = properties['Keyword']
-#         #metaData = clip.GetMetadata()
-#         print( 'Clip: [' + name + '], \tUsage: [' + usage + '], \tOptimized: [' + optimized + '],  \tDescription: [' + description + '], \tComments: [' + comments + '],\tKeywords: [' + keywords + ']' )
-
-#     subFolders = folder.GetSubFolderList()
-#     for sub in subFolders:
-#         iterateFolder( sub )
-
-
 KEYWORD = 'HasFusionComp'
 TRACKTYPE = 'video'
 
@@ -43,7 +23,13 @@ for tmlindx in range(int(timelineCount)) :
             fuCompCount = tlItem.GetFusionCompCount()
             if ( fuCompCount > 0 ):
                 print( "timeline: " + tlName + ", track: " + str(trackIndx) + ", Name: " + itemName + ", Comps: " + str(fuCompCount) )
-
-
-
-# iterateFolder( rootFolder )
+                # # if this clip does not have the keyword, add it.
+                # clip = tlItem.GetMediaPoolItem()
+                # if ( clip ) :
+                #     keywords = clip.GetMetadata( 'Keywords' )
+                #     if ( keywords is None or len(keywords.strip().strip(',')) == 0 ) :
+                #         print( "Setting keywords to: " + KEYWORD )
+                #         clip.SetMetadata( 'Keywords', KEYWORD )
+                #     elif ( KEYWORD not in keywords ):
+                #         print( "Adding keyword to: " + keywords )
+                #         clip.SetMetadata( 'Keywords', keywords + ',' + KEYWORD )

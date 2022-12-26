@@ -12,18 +12,20 @@ def iterateFolder( folder ):
         #usage     = int(properties['Usage'])
         comments = properties['Comments']
         keywords    = properties['Keyword']
+        file_path   = properties['File Path']
+        clip.SetMetadata( 'Keywords', keywords + ',' + file_path )
 
-        metaData = clip.GetMetadata()
-        if ( 'Comments' in metaData and (len(metaData['Comments'].strip()) > 0)):
-            comments = metaData[ 'Comments' ].strip()
-            if ( 'Keywords' in metaData  and (len(metaData['Keywords'].strip().strip(",")) > 0)):
-                keywords = metaData[ 'Keywords' ].strip()
-                print( 'Appending comments (' + comments + ') to keywords (' + keywords + ')' )
-                clip.SetMetadata( 'Keywords', keywords + ',' + comments )
-            else:
-                print( 'Copying comments (' + comments + ') to keywords' )
-                clip.SetMetadata( 'Keywords',  comments )
-                clip.SetMetadata( 'Comments', '' )
+        # metaData = clip.GetMetadata()
+        # if ( 'Comments' in metaData and (len(metaData['Comments'].strip()) > 0)):
+        #     comments = metaData[ 'Comments' ].strip()
+        #     if ( 'Keywords' in metaData  and (len(metaData['Keywords'].strip().strip(",")) > 0)):
+        #         keywords = metaData[ 'Keywords' ].strip()
+        #         print( 'Appending comments (' + comments + ') to keywords (' + keywords + ')' )
+        #         clip.SetMetadata( 'Keywords', keywords + ',' + comments )
+        #     else:
+        #         print( 'Copying comments (' + comments + ') to keywords' )
+        #         clip.SetMetadata( 'Keywords',  comments )
+        #         clip.SetMetadata( 'Comments', '' )
 
     subFolders = folder.GetSubFolderList()
     for sub in subFolders:

@@ -36,4 +36,5 @@ You can copy these by running the setupEnv.py script like this:  'python3 setupE
 - setupEnv.py - import this to get the module loaded from a hard-coded path if needed.  This script removes the need to copy the Resolve script into the Comp folder.
 - test.py - just a test of the python in resolve.  Lists all the clips that are used in the media pool.
 - whatVersion.py - just reports the version of python
+- copyFilePath.py - I was asked to create a dialog box to allow someone to copy the file path for the clip to the user selected location of the Keywords, Comments, or Description fields.  This script, once installed, can be run from Workspace->Scripts->Comp->copyFilePath and will copy the path for every clip in the project.  The path, if found, can be removed with the 'Remove' button.
 
