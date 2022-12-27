@@ -4,15 +4,8 @@ Python scripts and notes for Resolve
 
 
 ## Setup on Mac
-I am still trying to figure this out.  The following is what I think made it work on my iMac Pro, but it did not work - and still does not - on my MacBook Pro.  When I figure out what works properly, I will update this read-me.
 
 It looks like Resolve needs the stock 3.6 python.  I picked up the package for Apple here:  https://www.python.org/ftp/python/3.6.7/python-3.6.7-macosx10.9.pkg
-
-Once that is installed, your ~/.bash_profile will be updated, but that won't matter because nothing will use that if launched from launchd.
-
-It may be that you need launchctl to set the environment which I think can be done with a LaunchAgent.  Some research lead me to the environment.plist that I have put into the LaunchAgents folder of this repo.  You can copy that to your ~/Library/LaunchAgents folder and it should set the environment thet next time you start.  Like I said, above, this is not yet working on my MacBook, but I believe it is what allowed Resolve to find Python 3.6.6 on my iMac Pro.
-
-You also may need to set the Python Version to 3.6 in the "Script" panel in "Fusion Settings". To do that, open the Fusion Page, click on the Fusion menu and select "Fusion Settings".  From the pop-up dialog, click on "Script" on the left side and select "3.6".
 
 The scripts need to be in the Comp folder to be found by Resolve. The setupEnv.py script can be run from a terminal (shell) to install the files like this:  'python3 setupEnv.py'
 
@@ -25,6 +18,10 @@ They are experiments and/or starting points for things I hope to have working ev
 
 To get these working for Resolve, copy these files to "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Comp/"
 You can copy these by running the setupEnv.py script like this:  'python3 setupEnv.py'
+
+## Usage:
+
+To use the scripts, click on Workspace->Scripts->Comp then select the script you want to run.  If there are errors or output, they will appear in the Console which you can see with Workspace->Console.
 
 
 ## Files:
